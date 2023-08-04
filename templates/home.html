@@ -20,19 +20,11 @@
         </h1>
         <img class="img-fluid" id="banner" src="http://10.20.80.30:5000/static/banner.jpg" height="400">
         <h2 class="text-center mt-4 mb-4">About EkimCorp</h2>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur 
-adipiscing elit, sed do eiusmod tempor incididunt ut 
-labore et dolore magna aliqua. Ut enim ad minim 
-veniam, quis nostrud exercitation ullamco laboris 
-nisi ut aliquip ex ea commodo consequat. Duis aute 
-irure dolor in reprehenderit in voluptate velit esse 
-cillum dolore eu fugiat nulla pariatur. Excepteur 
-sint occaecat cupidatat non proident, sunt in culpa 
-qui officia deserunt mollit anim id est laborum.</p>
+        <p class="lead">EkimCorp, established in 1985 in Clichy-Sous-Bois, is a leading recruitment website that has been at the forefront of connecting employers and job seekers for nearly four decades. With a rich history and deep-rooted expertise in the recruitment industry, EkimCorp has continuously evolved to meet the changing demands of the job market. As a pioneer in its field, the platform boasts an extensive network of top-notch employers and talented professionals. The user-friendly interface and advanced search algorithms make finding the perfect match between employers and candidates a seamless experience. Whether you are a seasoned professional looking for your next career move or an employer seeking top talent, EkimCorp provides a reliable and efficient platform to facilitate your hiring needs. With a commitment to excellence and a dedication to matching the right talent with the right opportunity, EkimCorp remains a trusted partner in the recruitment landscape.</p>
         <h2 class="text-center mt-4 mb-4">Open positions</h2>
         <div>
           {% for job in jobs %}
-            <div>{{job['title']}}</div>
+            {% include 'jobitem.html' %}
           {% endfor %}
         </div>
         <div class="text-center">
