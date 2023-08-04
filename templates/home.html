@@ -15,7 +15,9 @@
       </head>
     <body>
         <div class="container">
-        <h1 class="text-center mt-2 mb-4">EkimCorp's Careers</h1>
+        <h1 class="text-center mt-2 mb-4">
+          {{company_name}} Careers
+        </h1>
         <img class="img-fluid" id="banner" src="http://10.20.80.30:5000/static/banner.jpg" height="400">
         <h2 class="text-center mt-4 mb-4">About EkimCorp</h2>
         <p class="lead">Lorem ipsum dolor sit amet, consectetur 
@@ -28,10 +30,14 @@ cillum dolore eu fugiat nulla pariatur. Excepteur
 sint occaecat cupidatat non proident, sunt in culpa 
 qui officia deserunt mollit anim id est laborum.</p>
         <h2 class="text-center mt-4 mb-4">Open positions</h2>
-        <p class="container">TODO - Show the jobs here</p>
         <div>
+          {% for job in jobs %}
+            <div>{{job['title']}}</div>
+          {% endfor %}
+        </div>
+        <div class="text-center">
         <button class="btn btn-primary btn-lg">Contact Us</button>
-        <p class="text-center">Copyright 2023, EkimCorp</p>
+        <p class="mt-4">Copyright 2023, EkimCorp</p>
         </div>
     </div>
     </body>
